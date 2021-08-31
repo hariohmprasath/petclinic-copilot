@@ -1,13 +1,4 @@
 SET FOREIGN_KEY_CHECKS=0;
-truncate table types;
-truncate table owners;
-truncate table pets;
-truncate table visits;
-truncate table vets;
-truncate table specialties;
-truncate table vet_specialties;
-
-SET FOREIGN_KEY_CHECKS=1;
 INSERT INTO types VALUES (1, 'cat');
 INSERT INTO types VALUES (2, 'dog');
 INSERT INTO types VALUES (3, 'lizard');

@@ -40,17 +40,5 @@ public class ApiGatewayApplication {
         return RouterFunctions.resources("/ui*", new ClassPathResource("static/"))
             .andRoute(RequestPredicates.GET("/"),
                 request -> ServerResponse.ok().contentType(MediaType.TEXT_HTML).bodyValue(indexHtml));
-    }
-
-    private void startUp(){
-        try {
-            ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator
-                    (false, false, "UTF-8", new ClassPathResource("data.sql"));
-            resourceDatabasePopulator.execute(dataSource);
-            log.info("Database successfully initialized for petclinic");
-        } catch (Exception e) {
-            String error = "Error while initializing data " + e.getMessage();
-            log.info(error, e);
-        }
-    }
+    }    
 }

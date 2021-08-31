@@ -21,7 +21,6 @@ import java.util.Optional;
 class OwnerResource {
 
     private final OwnerRepository ownerRepository;
-
     /**
      * Create Owner
      */
@@ -66,7 +65,6 @@ class OwnerResource {
         ownerModel.setTelephone(ownerRequest.getTelephone());
 
         // Save Subsegment
-        log.info("Saving owner {}", ownerModel);
         ownerRepository.save(ownerModel);
     }
 }
